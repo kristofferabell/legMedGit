@@ -7,7 +7,7 @@ def birthday(n):
         return s*(365-(n-1))/365.0
 
 
-a = birthday(366)
+a = birthday(32)
 print a
 
 
