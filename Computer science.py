@@ -7,7 +7,11 @@ def birthday(n):
         return s*(365-(n-1))/365.0
 
 
+<<<<<<< HEAD
 a = birthday(1)
+=======
+a = birthday(3200)
+>>>>>>> origin/master
 print a
 
 
