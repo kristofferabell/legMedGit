@@ -14,6 +14,7 @@ a = birthday(1)
 print a
 
 # Mangler kommentar
+# kommentar
 print "Hello World"
 
 =======
