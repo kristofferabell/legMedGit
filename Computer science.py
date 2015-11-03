@@ -22,3 +22,6 @@ print "ER I GLAR?!?!?!?"
 >>>>>>> 5a5bc4bd018f41a497d4b0c792cf267e118550aa
 
 print "S7-LAN FTW"
+
+
+print "FRONT END FTW <3"
