@@ -10,3 +10,6 @@ def birthday(n):
 
 a = birthday(1)
 
+print "ER I GLAR?!?!?!?"
+
+print "S7-LAN FTW"
