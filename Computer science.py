@@ -10,9 +10,3 @@ def birthday(n):
 
 a = birthday(1)
 
-print a
-
-
-print "Hello World"
-
-
