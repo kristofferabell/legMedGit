@@ -1,0 +1,66 @@
+package JavaProject.SFV;
+
+import java.io.*;
+import java.util.*;
+
+public class mainProject {
+    public static void main(String[] args)
+        //fjerner FileNotFound error.
+            throws FileNotFoundException, IOException {
+        //importering af fil i følgende method
+        importFile();
+    }
+
+    public static void importFile() {
+        //forsøg på importering af fil.
+        try {
+            //filen sendes til følgende method
+            readFile("C:/Users/Tommy/OneDrive/Java/src/JavaProject/SFV/sortedList.txt");
+        }
+        //hvis filen ikke findes printes error.
+        catch (Exception ex) {
+            System.out.println("Error:");
+            ex.printStackTrace();
+        }
+    }
+
+    public static void readFile(String filename)
+            throws FileNotFoundException, IOException {
+        //række funktioner som gemmer filen.
+        FileReader fileReader = new FileReader(filename);
+        BufferedReader in = new BufferedReader(fileReader);
+
+        //ArrayList nameList dannes.
+        List<String> nameList = new ArrayList<String>();
+
+        while (true) {
+            //hver linje gemmes i s.
+            String s = in.readLine();
+            //stopper når der ikke er flere linjer.
+            if (s == null) break;
+            //hver linje gemmes i en ArrayList.
+            nameList.add(s);
+        }
+        //listen sorteres.
+        Collections.sort(nameList);
+        //listen printes et navn ad gangen.
+        for (String temp : nameList) {
+            //shortenName bruges for det printede navn.
+            System.out.println(shortenName(temp));
+        }
+    }
+    public static String shortenName(String name) {
+        //det fulde navn placeres i en liste med fornavn og efternavn.
+        String [] fullName = name.split(" ");
+        //fornavnet assignes.
+        String firstName = fullName[0];
+        //fornavnet splittes op i dele.
+        String [] firstNameSplit = firstName.split("");
+        //fornavnets første bogstav assignes.
+        String firstLetterOfName = firstNameSplit[1];
+        //efternavnet assigens
+        String lastName = fullName[1];
+        //det hele returneres til print.
+        return(firstLetterOfName + "." + " " + lastName);
+    }
+}
